@@ -1,6 +1,24 @@
 {
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "scripts": {
+    "prepare": "husky install", 
+    "prettier": "prettier --write ." 
+  },
   "devDependencies": {
-    "@shopify/prettier-plugin-liquid": "^1.4.0",
-    "prettier": "3.1.1"
+    "@shopify/prettier-plugin-liquid": "^1.4.0", 
+    "husky": "^9.1.5", 
+    "lint-staged": "^15.2.9",
+    "prettier": "3.1.1" 
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,css,scss,md,json,html,liquid}": [
+      "prettier --write" 
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged" 
+    }
   }
 }
