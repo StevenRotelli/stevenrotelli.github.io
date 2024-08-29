@@ -46,12 +46,12 @@ jobs:
           echo "REPOSITORY=$REPOSITORY" >> $GITHUB_ENV
           echo "BRANCH=$BRANCH" >> $GITHUB_ENV
         env:
-          REPO_BRANCH: ${{ env.REPO_BRANCH }}
+          REPO_BRANCH: ${{ env.REPOSITORY }}
       - uses: actions/checkout@v4
         with:
-          repository: ${{ github.repository }}
+          repository: ${{ env.REPOSITORY }}
           token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN}}
-          ref: ${{ env.REPO_BRANCH }}
+          ref: ${{ env.BRANCH }}
       - uses: actions/checkout@v4
         with:
           repository: "myactionway/lighthouse-badges"
