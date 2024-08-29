@@ -106,33 +106,19 @@
       "name": "Programming",
       "level": "Proficient",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        ".NET C#/VB",
-        "SQL"
-      ]
+      "keywords": [".NET C#/VB", "SQL"]
     },
     {
       "name": "Enterprise Content Management",
       "level": "Expert",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "ApplicationXtender",
-        "OpenText",
-        "OnBase",
-        "Box",
-        "SharePoint"
-      ]
+      "keywords": ["ApplicationXtender", "OpenText", "OnBase", "Box", "SharePoint"]
     },
     {
       "name": "Enterprise Capture",
       "level": "Expert",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [
-        "Kofax Capture",
-        "Kofax KTM",
-        "Captiva",
-        "Grooper"
-      ]
+      "keywords": ["Kofax Capture", "Kofax KTM", "Captiva", "Grooper"]
     }
   ],
   "languages": [
@@ -156,10 +142,7 @@
     {
       "name": "Software",
       "icon": "fa-solid fa-tag",
-      "keywords": [
-        "Embedded Programming",
-        ""
-      ]
+      "keywords": ["Embedded Programming", ""]
     }
   ],
   "references": [

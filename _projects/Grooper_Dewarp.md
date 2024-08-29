@@ -9,11 +9,11 @@ giscus_comments: false
 # related_publications: true
 ---
 
-Let's learn how to both create a custom Image Processing command in Grooper, and integrate with third party Image Processing libraries. 
+Let's learn how to both create a custom Image Processing command in Grooper, and integrate with third party Image Processing libraries.
 
 note:
 
-If you're using Grooper 2023.1 or less you'll need to use Visual Studio 2019, if using Grooper 2024, please use the latest version of Visual Studio. 
+If you're using Grooper 2023.1 or less you'll need to use Visual Studio 2019, if using Grooper 2024, please use the latest version of Visual Studio.
 
     ---
     layout: page
