@@ -49,9 +49,9 @@ jobs:
           REPO_BRANCH: ${{ env.REPO_BRANCH }}
       - uses: actions/checkout@v4
         with:
-          repository: ${{ env.REPOSITORY }}
-          token: ${{ secrets[github.event.inputs.token_name] || secrets[env.TOKEN_NAME] }}
-          ref: ${{ env.BRANCH }}
+          repository: ${{ github.repository }}
+          token: ${{ secrets.LIGHTHOUSE_BADGER_TOKEN}}
+          ref: ${{ env.REPO_BRANCH }}
       - uses: actions/checkout@v4
         with:
           repository: "myactionway/lighthouse-badges"
