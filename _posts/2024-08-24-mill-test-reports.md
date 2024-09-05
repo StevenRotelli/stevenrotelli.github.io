@@ -4,6 +4,7 @@ title: Automating Mill Test Reports
 date: 2024-08-28 11:59:00-0400
 description: Understanding, and automating mill test reports with Grooper.
 tags: grooper
+published: false
 categories: work
 giscus_comments: true
 thumbnail: assets/img/posts/mtr/thumb.jpg
@@ -12,7 +13,6 @@ pretty_table: true
 toc:
   sidebar: true
 chart:
-  vega_lite: true
   chartjs: true
 ---
 
@@ -33,131 +33,62 @@ to the front matter of the post. The table of contents will be automatically gen
 
 ## Challenges
 
-Whether a business is manufacturing, redistributing, or making parts from metals, it becomes incumbent upon that business to certify or re-certify the Material Test Report.
-
+Whether a business is manufacturing, redistributing, or making parts from metals, it becomes incumbent upon that business to certify or re-certify that the **Material Test Report** complies with the designation i.e ASTM A 572/572M - 21.
 When a customer receives this document, usually as part of their receiving packet, they must validate that the data contained from the mill or third party is accurate and must re-certify the MTR.
 This is done for a large variety of reasons including:
 
-- Ensure that the material doesn't fail structurally.
+- Ensure that the material doesn't fail mechanically.
 - Proof to secure bids or contracts.
 - Early problem detection.
-- Negotiate pricing on un-compliant metal.
+- Negotiate pricing on un-compliant materials.
 - Prevent liability or litigation in the event of material failure.
 
-This use case is largely motivated by loss avoidance and government regulation, but the process manufacturers or mills are slow and at risk of error.
+This use case is largely motivated by loss avoidance and government regulation, and the "re-certification" process is slow and at risk of error.
 The recertification of an MTR is typically performed by a knowledge worker, metallurgist, or material engineer; often this process is done manually, by locating the material standard, designation,
 type on the MTR, and the reference document published by the international body.
 
-For instance, the following MTR has the following description.
+ASTM is one of the internationial standard bodies, and is the most common we see in our practice. Let's breakdown the **ASTM Desigtnation System** using the following example.
+
+**ASTM A 516/ A 516M-90 (2001) Grade 70 - Pressure Vessel Plates, Carbon Steel, for Moderate and Lower Temperature Service**
+
+- The "A" describes a ferrous metal, but does not subclassify it as cast iron, carbon steel, allow steel, or stainless steel.
+- 516 is a sequential number without any relationship to the metal's properties.
+- The "M" indicates that the standard A 516M is written in rationalized SI untis _(Metric)_. Therefore A 516/A 516M uses both inch-pound and SI untis.
+- 90 indicates the year of adoption or last revision.
+- (2001) is the year of last reapproval
+- Grade 70 indicates the minimum tensile strength in ksi.
+
+So let's look at our example in this image.
 
 <div>
         {% include figure.liquid path="assets/img/posts/mtr/mtr-example-zoom.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
-From this we know that the standard is ASTM, the designation is A 572, the grade is 65 [450], the type is 3, and the year is 2013. You can learn about how this breakdown occurs in the Handbook of World Steel Standards, on page 18.
-
-The worker then refers to the documentation for the standard, the standard must be purchased again from the international body i.e. ASTM every time there is a new revision, usually 3 years.
+In this example we see standard is ASTM, the designation is A 572, the grade is 65 \[450\], the type is 3, and the year is 2013. So our worker refers to the documentation for the standard.
+the standard must be purchased again from the international body i.e. ASTM every time there is a new revision, usually 3 years.
 Clients often prefer to certify to the latest year they have, and not the year found on the document.
 
-Here is a copy of the ASTM A572-21, that would allow a worker to determine if this MTR is accurate. Page 2 shows us the Chemical Requirements that could be used to validate the chemistry
+Here is part of the ASTM A 572/A 572M - 21, that would allow a worker to determine if this MTR' Major elements are accurate.
 
 <div>
         {% include figure.liquid path="assets/img/posts/mtr/astm-572-chem.png" class="img-fluid rounded z-depth-1" zoomable=true %}
 </div>
 
-The current way of validating is 100% manual reading both the **MTR** and the **Designation** document and checking that the chemistry or property is valid. Some organizations have developed they're own excel spreadsheets that have validation rules, but the process is still
-manual, error prone, and slow.
+The current way of validating is 100% manual reading both the **MTR** and the **Designation** document and checking that the chemistry or property is valid.
+Some organizations have developed they're own excel spreadsheets that have validation rules,
+but the process is still manual, error prone, and slow.
+
+However, if we read more carefully we can see there are nuances regarding **Manganese**.
+
+> _B_ Manganse, minimum by heat analysis of 0.80 % (0.75 % by product analysis) shall be required for all plates over 3/8 in. [10 mm] in thickness; a minimum of 0.50 % (0.45 % by product analysis) shall be required for plates
+> 3/8 in. [10 mm] and less in thickness, and for all other products. The manganese to carbon ratio shall not be less than 2 to 1.`
+
+> _D_ For each reduction of 0.01 percentage point below the specified carbon maximum, an increase of 0.06 percentage point manage above the specified maximum is permitted, up to a maximum of 1.60.
 
 The standards that yield from an international body are many and complex bringing in they're own sets of complexity and matricices.
 
-```chartjs
-{
-  "type": "bar",
-  "data": {
-    "labels": ["Carbon", "Manganese", "Phosphorus", "Sulfur", "Silicon"],
-    "datasets": [
-      {
-        "label": "Grade 42",
-        "data": [
-          {"x": "Carbon", "o": 0.18, "h": 0.21, "l": 0.18, "c": 0.21},
-          {"x": "Manganese", "o": 0.9, "h": 1.35, "l": 0.9, "c": 1.35},
-          {"x": "Phosphorus", "o": 0.025, "h": 0.030, "l": 0.025, "c": 0.030},
-          {"x": "Sulfur", "o": 0.025, "h": 0.030, "l": 0.025, "c": 0.030},
-          {"x": "Silicon", "o": 0.15, "h": 0.40, "l": 0.15, "c": 0.40}
-        ],
-        "borderColor": "rgba(75,192,192,1)",
-        "backgroundColor": "rgba(75,192,192,0.4)"
-      },
-      {
-        "label": "Grade 50",
-        "data": [
-          {"x": "Carbon", "o": 0.18, "h": 0.23, "l": 0.18, "c": 0.23},
-          {"x": "Manganese", "o": 0.9, "h": 1.35, "l": 0.9, "c": 1.35},
-          {"x": "Phosphorus", "o": 0.025, "h": 0.030, "l": 0.025, "c": 0.030},
-          {"x": "Sulfur", "o": 0.025, "h": 0.030, "l": 0.025, "c": 0.030},
-          {"x": "Silicon", "o": 0.15, "h": 0.40, "l": 0.15, "c": 0.40}
-        ],
-        "borderColor": "rgba(192,75,192,1)",
-        "backgroundColor": "rgba(192,75,192,0.4)"
-      },
-      {
-        "label": "Grade 55",
-        "data": [
-          {"x": "Carbon", "o": 0.18, "h": 0.25, "l": 0.18, "c": 0.25},
-          {"x": "Manganese", "o": 0.9, "h": 1.35, "l": 0.9, "c": 1.35},
-          {"x": "Phosphorus", "o": 0.025, "h": 0.030, "l": 0.025, "c": 0.030},
-          {"x": "Sulfur", "o": 0.025, "h": 0.030, "l": 0.025, "c": 0.030},
-          {"x": "Silicon", "o": 0.15, "h": 0.40, "l": 0.15, "c": 0.40}
-        ],
-        "borderColor": "rgba(75,75,192,1)",
-        "backgroundColor": "rgba(75,75,192,0.4)"
-      },
-      {
-        "label": "Grade 60",
-        "data": [
-          {"x": "Carbon", "o": 0.18, "h": 0.26, "l": 0.18, "c": 0.26},
-          {"x": "Manganese", "o": 0.9, "h": 1.35, "l": 0.9, "c": 1.35},
-          {"x": "Phosphorus", "o": 0.025, "h": 0.030, "l": 0.025, "c": 0.030},
-          {"x": "Sulfur", "o": 0.025, "h": 0.030, "l": 0.025, "c": 0.030},
-          {"x": "Silicon", "o": 0.15, "h": 0.40, "l": 0.15, "c": 0.40}
-        ],
-        "borderColor": "rgba(192,192,75,1)",
-        "backgroundColor": "rgba(192,192,75,0.4)"
-      },
-      {
-        "label": "Grade 65",
-        "data": [
-          {"x": "Carbon", "o": 0.18, "h": 0.26, "l": 0.18, "c": 0.26},
-          {"x": "Manganese", "o": 0.9, "h": 1.65, "l": 0.9, "c": 1.65},
-          {"x": "Phosphorus", "o": 0.025, "h": 0.030, "l": 0.025, "c": 0.030},
-          {"x": "Sulfur", "o": 0.025, "h": 0.030, "l": 0.025, "c": 0.030},
-          {"x": "Silicon", "o": 0.15, "h": 0.40, "l": 0.15, "c": 0.40}
-        ],
-        "borderColor": "rgba(75,192,75,1)",
-        "backgroundColor": "rgba(75,192,75,0.4)"
-      }
-    ]
-  },
-  "options": {
-    "scales": {
-      "y": {
-        "beginAtZero": true,
-        "title": {
-          "display": true,
-          "text": "Percentage (%)"
-        }
-      },
-      "x": {
-        "title": {
-          "display": true,
-          "text": "Chemical Element"
-        }
-      }
-    }
-  }
-}
-```
-Based on my analysis, after reading several dozen of these standards I think we can ontologically breakdown
+After reading several dozen of these standard designations, I believe we can ontologically breakdown
+
 ### Standard Bodies
 
 **ASTM International (ASTM)**
@@ -172,49 +103,19 @@ ISO develops and publishes international standards for a wide range of industrie
 
 CEN is responsible for developing European Standards (ENs) across various sectors, including steel. CEN standards are recognized across Europe and often harmonize with or complement ISO standards.
 
-**International Electrotechnical Commission (IEC)**
+More strandard bodies:
 
-While primarily focused on electrical and electronic standards, IEC also deals with standards related to steel used in electrical equipment and components.
-
-**American Iron and Steel Institute (AISI)**
-
-AISI is a U.S.-based organization that, among other things, develops standards and specifications for steel products, particularly in the context of construction and manufacturing.
-
-**Japanese Industrial Standards Committee (JISC)**
-
-JISC is responsible for developing Japanese Industrial Standards (JIS) for various materials, including steel. JIS standards are widely used in Japan and other regions.
-
-**Deutsches Institut für Normung (DIN)**
-
-DIN is the German national organization for standardization and develops DIN standards, which include specifications for steel materials and products.
-
-**British Standards Institution (BSI)**
-
-BSI develops and publishes British Standards, including those related to steel, which are used in the UK and internationally.
-
-**Russian Federal Agency on Technical Regulating and Metrology (Rosstandart)**
-
-Rosstandart is responsible for developing GOST standards in Russia, which include specifications for steel.
-
-**Bureau of Indian Standards (BIS)**
-
-BIS develops Indian Standards (IS) for various materials, including steel, and plays a key role in standardization in India.
-
-**China Iron and Steel Association (CISA)**
-
-CISA, in conjunction with other Chinese regulatory bodies, contributes to the development of standards for the steel industry in China.
-
-**Association Française de Normalisation (AFNOR)**
-
-AFNOR is the French standardization body responsible for developing and publishing French standards, including those for steel.
-
-**Standards Australia**
-
-Standards Australia is the national standards organization in Australia and is responsible for developing Australian Standards, including those for steel products.
-
-**Standards Council of Canada (SCC)**
-
-SCC is responsible for overseeing the development of standards in Canada, including those related to steel.
+- International Electrotechnical Commission (IEC)
+- American Iron and Steel Institute (AISI)
+- Japanese Industrial Standards Committee (JISC)
+- Deutsches Institut für Normung (DIN)
+- British Standards Institution (BSI)
+- Russian Federal Agency on Technical Regulating and Metrology (Rosstandart)
+- Bureau of Indian Standards (BIS)
+- China Iron and Steel Association (CISA)
+- Association Française de Normalisation (AFNOR)
+- Standards Australia
+- Standards Council of Canada (SCC)
 
 Many MTRs have multiple ways of presenting data, some tables are combined often to condense information on the page, as shown with the documents
 
@@ -391,5 +292,3 @@ Some elements may have specific designations based on their role or required pre
 {% enddetails %}
 
 ## Solution
-
-

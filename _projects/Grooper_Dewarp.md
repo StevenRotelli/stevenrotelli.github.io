@@ -3,6 +3,7 @@ layout: page
 title: Grooper Dewarp
 description: Using OpenCV to dewarp a page capture on a mobile device.
 img: assets/img/dewarp_5.png
+published: false
 importance: 1
 category: work
 giscus_comments: false
