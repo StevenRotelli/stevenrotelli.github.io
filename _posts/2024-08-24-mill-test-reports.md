@@ -4,7 +4,6 @@ title: Automating Mill Test Reports
 date: 2024-08-28 11:59:00-0400
 description: Understanding, and automating mill test reports with Grooper.
 tags: grooper
-published: false
 categories: work
 giscus_comments: true
 thumbnail: assets/img/posts/mtr/thumb.jpg

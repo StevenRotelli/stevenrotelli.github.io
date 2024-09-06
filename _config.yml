@@ -113,7 +113,7 @@ youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
 contact_note: >
-  Peferred contact method, email.
+  Peferred contact method email.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -242,6 +242,8 @@ exclude:
   - README.md
   - readme_preview/
   - vendor
+  - stevenrotelli.github.io.code-workspace
+
 keep_files:
   - CNAME
   - .nojekyll
@@ -307,8 +309,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Rotelli]
+  first_name: [Steven, T.]
 
   style: apa
   locale: en
@@ -389,7 +391,7 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  enabled: false # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
   widths:
     - 480
     - 800
@@ -642,7 +644,6 @@ jsonresume:
   - work
   - education
   - projects
-  - volunteer
   - certificates
   - skills
   - languages

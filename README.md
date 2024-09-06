@@ -30,18 +30,6 @@ Run the test yourself: [Google Lighthouse PageSpeed Insights](https://pagespeed.
 
 Run the test yourself: [Google Lighthouse PageSpeed Insights](https://pagespeed.web.dev/report?url=https%3A%2F%2Falshedivat.github.io%2Fal-folio%2F&form_factor=mobile)
 
-## Getting started
-
-Want to learn more about Jekyll? Check out [this tutorial](https://www.taniarascia.com/make-a-static-website-with-jekyll/). Why Jekyll? Read [Andrej Karpathy's blog post](https://karpathy.github.io/2014/07/01/switching-to-jekyll/)! Why write a blog? Read [Rachel Thomas blog post](https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045).
-
-## Installing and Deploying
-
-For installation and deployment details please refer to [INSTALL.md](INSTALL.md).
-
-## Customizing
-
-For customization details please refer to [CUSTOMIZE.md](CUSTOMIZE.md).
-
 ## Features
 
 ### Light/Dark Mode
@@ -61,7 +49,7 @@ There are currently 2 different ways of generating the CV page content. The firs
 
 What this means is, if there is no resume data defined in [\_config.yml](_config.yml) and loaded via a json file, it will load the contents of [\_data/cv.yml](_data/cv.yml) as fallback.
 
-[![CV Preview](readme_preview/cv.png)](https://alshedivat.github.io/al-folio/cv/)
+[![CV Preview](readme_preview/cv.png)](https://stevenrotelli.github.io/cv/)
 
 ---
 

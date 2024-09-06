@@ -1,15 +1,15 @@
 {
   "basics": {
     "name": "Steven T. Rotelli",
-    "label": "Software Engineer",
+    "label": "Enterprise Account Manager",
     "image": "",
     "email": "strotelli@bisok.com",
     "phone": "(405) 418-7450",
-    "url": "https://steverotelli.github.io/",
-    "summary": "An Oklahoma Native ",
+    "url": "https://stevenrotelli.com",
+    "summary": "A life long Oklahoma native, and software nerd.",
     "location": {
-      "address": "13900 N Harvey Ave",
-      "postalCode": "OK 73120",
+      "address": "13900 N Harvery Ave",
+      "postalCode": "OK 73013",
       "city": "Edmond",
       "countryCode": "US",
       "region": "Oklahoma"
@@ -24,25 +24,43 @@
   },
   "work": [
     {
-      "name": "BIS - Creator of Grooper",
-      "position": "Enterprise Account Executive",
-      "url": "https://www.bisok.com",
-      "startDate": "2012-08-01",
-      "summary": "",
-      "highlights": ["Automation"]
+      "name": "BIS, Inc.",
+      "position": "Professor of Theoretical Physics",
+      "url": "https://example.com",
+      "startDate": "2012-08-11",
+      "summary": "Currently working in Enterprise Sales",
+      "highlights": ["ECM"]
     }
-  ]
+  ],
+  "volunteer": [
+    {
+      "organization": "Heart and Lung Association",
+      "location": "Oklahoma, United States",
+      "position": "",
+      "url": "https://example.com",
+      "startDate": "2014-04-01",
+      "endDate": "2015-07-01",
+      "summary": "Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.",
+      "highlights": ["Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march.", "Men of the year 2014 by Time magazine"]
+    }
+  ],
   "education": [
     {
       "institution": "University of Central Oklahoma",
       "location": "Edmond, Oklahoma",
       "url": "https://www.uco.edu/",
       "area": "Software Development",
-      "studyType": "",
-      "startDate": "2012-01-01",
-      "endDate": "2012-04-31",
-      "score": "",
-      "courses": [""]
+      "startDate": "2012-08-01",
+      "endDate": "2013-04-30"
+    }
+  ],
+  "awards": [
+    {
+      "title": "",
+      "date": "",
+      "awarder": "",
+      "url": "",
+      "summary": ""
     }
   ],
   "certificates": [
@@ -50,41 +68,39 @@
       "name": "OnBase Certified Installer",
       "date": "2021-12-17",
       "issuer": "Hyland",
-      "url": "https://hyland.com",
+      "url": "https://hyalnd.com",
       "icon": "fa-solid fa-location-dot"
     },
     {
-      "name": "HAM Radio",
+      "name": "Ham Radio Technician",
       "date": "2020-01-01",
       "issuer": "ARRL",
       "url": "https://www.arrl.org",
       "icon": "fa-solid fa-tag"
     }
-  ]
+  ],
+  "publications": [
+    {
+      "name": "",
+      "publisher": "",
+      "releaseDate": "",
+      "url": "",
+      "summary": ""
+    }
+  ],
   "skills": [
     {
-      "name": "Backend Programming",
-      "level": "Proficient",
+      "name": "Programming",
+      "level": "Professional",
       "icon": "fa-solid fa-hashtag",
-      "keywords": [".NET C#/VB", "SQL"]
-    },
-    {
-      "name": "Frontend Programming",
-      "level": "Proficient",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["JS", "React", "Blazor"]
-    },
-    {
-      "name": "Enterprise Content Management",
-      "level": "Expert",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["ApplicationXtender", "OpenText", "OnBase", "Box", "SharePoint"]
-    },
-    {
-      "name": "Enterprise Capture",
-      "level": "Expert",
-      "icon": "fa-solid fa-hashtag",
-      "keywords": ["Kofax Capture", "Kofax KTM", "Captiva", "Grooper"]
+      "keywords": [
+        "Quantum Mechanics",
+        "Quantum Computing",
+        "Quantum Information",
+        "Quantum Cryptography",
+        "Quantum Communication",
+        "Quantum Teleportation"
+      ]
     }
   ],
   "languages": [
@@ -100,15 +116,40 @@
     },
     {
       "language": "Japanese",
-      "fluency": "In-progress",
+      "fluency": "Beginner",
       "icon": ""
     }
   ],
   "interests": [
     {
-      "name": "Software",
+      "name": "Physics",
       "icon": "fa-solid fa-tag",
-      "keywords": ["Embedded Programming",]
+      "keywords": [
+        "Quantum Mechanics",
+        "Quantum Teleportation"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Professor John Doe",
+      "icon": "fa-solid fa-laptop",
+      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+    },
+    {
+      "name": "Professor John Doe",
+      "icon": "fa-solid fa-thumbtack",
+      "reference": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit. D"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Quantum Computing",
+      "summary": "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.",
+      "highlights": ["Quantum Teleportation", "Quantum Cryptography"],
+      "startDate": "2018-01-01",
+      "endDate": "2018-01-01",
+      "url": "https://example.com"
     }
   ]
 }
