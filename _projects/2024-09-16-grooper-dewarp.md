@@ -10,7 +10,7 @@ giscus_comments: false
 # related_publications: true
 ---
 
-Let's learn how to both create a custom Image Processing command in Grooper, and integrate with third party Image Processing libraries.
+Let's learn how to both create a custom image processing command in Grooper, and integrate with third party image processing libraries like **OpenCV**.
 
 note:
 
