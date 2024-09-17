@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Father, Husband, Enterprise Sales at BIS - Creator of Grooper.
 
@@ -17,12 +17,15 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Working in the Enterprise content management space for **12 years** has given me valuable insight into real world problems and solutions.
-In the time I've been at BIS I've gotten married, and had 2 children, and my family is amazing.
+With over 12 years of experience in the Enterprise Content Management space, I’ve gained deep insight into real-world challenges and effective solutions.
+During my time at BIS, I’ve had the privilege of working on diverse, complex projects that have sharpened my technical expertise and problem-solving skills.
 
-I often find myself engaged in very technical projects,
-both at home and work, so I created this site to share and inform about my personal skill set.
+On a personal note, I’ve also grown in ways beyond my career. I’ve married, and I’m now a father of two incredible children. My family is my greatest motivation,
+constantly reminding me of the purpose behind everything I do—both at work and in life.
 
-More coming soon.
+I am frequently immersed in highly technical projects, whether in my professional life or at home.
+This site is my way of sharing the knowledge I’ve gained and showcasing my skill set, hoping to inform and inspire others with similar passions.
 
-[Book Time with me](https://meetings.hubspot.com/steven-rotelli?uuid=16fc727f-fbcc-48ff-b8e6-ccb44f6c4ba6)
+If you’re interested in discussing a project or exploring potential collaborations, feel free to book a consultation with me below.
+
+<p> <a href="https://meetings.hubspot.com/steven-rotelli?uuid=16fc727f-fbcc-48ff-b8e6-ccb44f6c4ba6" class="btn btn-primary"> <i class="fa-regular fa-calendar"></i> Schedule a Consultation </a> </p>

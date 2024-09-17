@@ -227,7 +227,8 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
-.post-description {
+.post-description,
+.proposal-description {
   margin-bottom: 2rem;
   font-size: 0.875rem;
 
@@ -540,13 +541,15 @@ footer.sticky-bottom {
   }
 }
 
-.post-title {
+.post-title,
+.proposal-title {
   mjx-container[jax="CHTML"][display="true"] {
     display: unset;
   }
 }
 
-.post-list {
+.post-list,
+.proposal-list {
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
@@ -557,13 +560,15 @@ footer.sticky-bottom {
     padding-top: 2rem;
     padding-bottom: 2rem;
 
-    .post-meta {
+    .post-meta,
+    .proposal-meta {
       color: var(--global-text-color-light);
       font-size: 0.875rem;
       margin-bottom: 0;
     }
 
-    .post-tags {
+    .post-tags,
+    .proposal-tags {
       color: var(--global-text-color-light);
       font-size: 0.875rem;
       padding-top: 0.25rem;
@@ -869,14 +874,17 @@ html.transition *:after {
 }
 
 // Extra Markdown style (post Customization)
-.post {
-  .post-meta {
+.post,
+.proposal {
+  .post-meta,
+  .proposal-meta {
     color: var(--global-text-color-light);
     font-size: 0.875rem;
     margin-bottom: 0;
   }
 
-  .post-tags {
+  .post-tags,
+  .proposal-tags {
     color: var(--global-text-color-light);
     font-size: 0.875rem;
     padding-top: 0.25rem;

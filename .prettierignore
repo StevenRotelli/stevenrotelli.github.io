@@ -9,3 +9,31 @@ assets/plotly/demo.html
 lighthouse_results/**
 _posts/2015-10-20-math.md
 _sass/font-awesome/*.scss
+
+# Ignore video files
+**/*.mp4
+
+# Ignore image files
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.gif
+**/*.svg
+**/*.ico
+**/*.ico
+
+# Ignore video files
+**/*.mp3
+
+# Ignore font files
+**/*.woff
+**/*.woff2
+**/*.ttf
+**/*.eot
+**/*.otf
+
+# Ignore PDFs and other non-code documents
+**/*.pdf
+**/*.docx
+**/*.xlsx
+
